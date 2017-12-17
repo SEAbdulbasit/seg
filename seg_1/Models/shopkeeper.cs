@@ -1,12 +1,11 @@
-﻿using System;
+﻿using seg_1.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace seg_1.Models
-{
-    public class shopkeeper
+public class shopkeeper
     {
        
         [Key]
@@ -16,8 +15,16 @@ namespace seg_1.Models
         [Required]
         [Display(Name = "Name")]
         public string shopkeeper_name { get; set; }
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string shopkeeper_password { get; set; }
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
         [Required]
         [Display(Name = "Address")]
         public string shopkeeper_address { get; set; }
@@ -31,5 +38,10 @@ namespace seg_1.Models
         public virtual ICollection<shop> shop { get; set; }
       
     }
-   
-}
+    public class ForgotPasswordViewModel
+    {
+    [Required]
+    [EmailAddress]
+    [Display(Name = "Email")]
+    public string Email { get; set; }
+    }
