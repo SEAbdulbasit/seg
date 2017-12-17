@@ -247,21 +247,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\distributors\Create.cshtml" />
-    <Content Include="Views\distributors\Delete.cshtml" />
-    <Content Include="Views\distributors\Details.cshtml" />
-    <Content Include="Views\distributors\Edit.cshtml" />
-    <Content Include="Views\distributors\Index.cshtml" />
     <Content Include="Views\distributions\Create.cshtml" />
     <Content Include="Views\distributions\Delete.cshtml" />
     <Content Include="Views\distributions\Details.cshtml" />
     <Content Include="Views\distributions\Edit.cshtml" />
     <Content Include="Views\distributions\Index.cshtml" />
-    <Content Include="Views\regional_manager\Create.cshtml" />
-    <Content Include="Views\regional_manager\Delete.cshtml" />
-    <Content Include="Views\regional_manager\Details.cshtml" />
-    <Content Include="Views\regional_manager\Edit.cshtml" />
-    <Content Include="Views\regional_manager\Index.cshtml" />
     <Content Include="Views\shopkeepers\Create.cshtml" />
     <Content Include="Views\shopkeepers\Delete.cshtml" />
     <Content Include="Views\shopkeepers\Details.cshtml" />
@@ -272,6 +262,16 @@
     <Content Include="Views\shops\Details.cshtml" />
     <Content Include="Views\shops\Edit.cshtml" />
     <Content Include="Views\shops\Index.cshtml" />
+    <Content Include="Views\distributors\Create.cshtml" />
+    <Content Include="Views\distributors\Delete.cshtml" />
+    <Content Include="Views\distributors\Details.cshtml" />
+    <Content Include="Views\distributors\Edit.cshtml" />
+    <Content Include="Views\distributors\Index.cshtml" />
+    <Content Include="Views\regional_manager\Create.cshtml" />
+    <Content Include="Views\regional_manager\Delete.cshtml" />
+    <Content Include="Views\regional_manager\Details.cshtml" />
+    <Content Include="Views\regional_manager\Edit.cshtml" />
+    <Content Include="Views\regional_manager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

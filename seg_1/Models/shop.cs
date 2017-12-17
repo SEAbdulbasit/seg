@@ -21,7 +21,7 @@ namespace seg_1.Models
         public string shop_mobile_num { get; set; }
 
         public virtual shopkeeper shopkeeper { get; set; }
-        [Display(Name = "Shop ID")]
+        [Display(Name = "Shopkeeper ID")]
         public int shopkeeper_id { get; set; }
 
     }

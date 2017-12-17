@@ -46,7 +46,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "regional_manager_id,regional_manager_name,regional_manager_password,regional_manager_mobile_no,regional_manager_email,regional_manager_start_date,distributor_id")] regional_manager regional_manager)
+        public ActionResult Create([Bind(Include = "regional_manager_id,regional_manager_name,regional_manager_password,ConfirmPassword,regional_manager_mobile_no,regional_manager_email,regional_manager_start_date,distributor_id")] regional_manager regional_manager)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "regional_manager_id,regional_manager_name,regional_manager_password,regional_manager_mobile_no,regional_manager_email,regional_manager_start_date,distributor_id")] regional_manager regional_manager)
+        public ActionResult Edit([Bind(Include = "regional_manager_id,regional_manager_name,regional_manager_password,ConfirmPassword,regional_manager_mobile_no,regional_manager_email,regional_manager_start_date,distributor_id")] regional_manager regional_manager)
         {
             if (ModelState.IsValid)
             {

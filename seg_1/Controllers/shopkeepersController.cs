@@ -46,7 +46,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "shopkeeper_id,shopkeeper_name,shopkeeper_password,shopkeeper_address,shopkeeper_mobile_no,shopeeper_email,shop_start_date")] shopkeeper shopkeeper)
+        public ActionResult Create([Bind(Include = "shopkeeper_id,shopkeeper_name,shopkeeper_password,ConfirmPassword,shopkeeper_address,shopkeeper_mobile_no,shopeeper_email,shop_start_date")] shopkeeper shopkeeper)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "shopkeeper_id,shopkeeper_name,shopkeeper_password,shopkeeper_address,shopkeeper_mobile_no,shopeeper_email,shop_start_date")] shopkeeper shopkeeper)
+        public ActionResult Edit([Bind(Include = "shopkeeper_id,shopkeeper_name,shopkeeper_password,ConfirmPassword,shopkeeper_address,shopkeeper_mobile_no,shopeeper_email,shop_start_date")] shopkeeper shopkeeper)
         {
             if (ModelState.IsValid)
             {
