@@ -8,7 +8,7 @@ namespace seg_1.Models
 {
     public class distributor
     {
-
+        [Key]
         [Display(Name = "ID")]
         public int distributor_id { get; set; }
         [Display(Name = "Name")]

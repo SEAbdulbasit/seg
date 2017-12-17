@@ -1,0 +1,66 @@
+﻿@model seg_1.Models.distributor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>distributor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distribbutor_mobile_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distribbutor_mobile_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributior_start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributior_start_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.distributor_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

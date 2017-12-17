@@ -1,0 +1,63 @@
+﻿@model IEnumerable<seg_1.Models.regional_manager>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.regional_manager_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.regional_manager_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.regional_manager_mobile_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.regional_manager_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.regional_manager_start_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.distributor_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.regional_manager_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.regional_manager_password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.regional_manager_mobile_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.regional_manager_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.regional_manager_start_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.distributor_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.regional_manager_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.regional_manager_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.regional_manager_id })
+        </td>
+    </tr>
+}
+
+</table>

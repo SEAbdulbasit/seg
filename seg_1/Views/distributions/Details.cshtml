@@ -1,0 +1,42 @@
+﻿@model seg_1.Models.distribution
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>distribution</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor.distributor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor.distributor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distribution_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distribution_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distribution_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distribution_address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.distribution_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

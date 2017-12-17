@@ -1,0 +1,66 @@
+﻿@model seg_1.Models.regional_manager
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>regional_manager</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.regional_manager_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regional_manager_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.regional_manager_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regional_manager_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.regional_manager_mobile_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regional_manager_mobile_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.regional_manager_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regional_manager_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.regional_manager_start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regional_manager_start_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.regional_manager_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -168,11 +168,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\distributionsController.cs" />
+    <Compile Include="Controllers\distributorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\regional_managerController.cs" />
+    <Compile Include="Controllers\shopkeepersController.cs" />
+    <Compile Include="Controllers\shopsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DispalyAttribute.cs" />
     <Compile Include="Models\distribution.cs" />
@@ -180,6 +186,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\regional_manager.cs" />
+    <Compile Include="Models\seg_1Context.cs" />
     <Compile Include="Models\shop.cs" />
     <Compile Include="Models\shopkeeper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,6 +247,31 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\distributors\Create.cshtml" />
+    <Content Include="Views\distributors\Delete.cshtml" />
+    <Content Include="Views\distributors\Details.cshtml" />
+    <Content Include="Views\distributors\Edit.cshtml" />
+    <Content Include="Views\distributors\Index.cshtml" />
+    <Content Include="Views\distributions\Create.cshtml" />
+    <Content Include="Views\distributions\Delete.cshtml" />
+    <Content Include="Views\distributions\Details.cshtml" />
+    <Content Include="Views\distributions\Edit.cshtml" />
+    <Content Include="Views\distributions\Index.cshtml" />
+    <Content Include="Views\regional_manager\Create.cshtml" />
+    <Content Include="Views\regional_manager\Delete.cshtml" />
+    <Content Include="Views\regional_manager\Details.cshtml" />
+    <Content Include="Views\regional_manager\Edit.cshtml" />
+    <Content Include="Views\regional_manager\Index.cshtml" />
+    <Content Include="Views\shopkeepers\Create.cshtml" />
+    <Content Include="Views\shopkeepers\Delete.cshtml" />
+    <Content Include="Views\shopkeepers\Details.cshtml" />
+    <Content Include="Views\shopkeepers\Edit.cshtml" />
+    <Content Include="Views\shopkeepers\Index.cshtml" />
+    <Content Include="Views\shops\Create.cshtml" />
+    <Content Include="Views\shops\Delete.cshtml" />
+    <Content Include="Views\shops\Details.cshtml" />
+    <Content Include="Views\shops\Edit.cshtml" />
+    <Content Include="Views\shops\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

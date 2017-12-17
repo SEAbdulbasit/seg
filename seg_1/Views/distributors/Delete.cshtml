@@ -1,0 +1,72 @@
+﻿@model seg_1.Models.distributor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>distributor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distribbutor_mobile_no)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distribbutor_mobile_no)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distributior_start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributior_start_date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

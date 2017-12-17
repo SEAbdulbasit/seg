@@ -1,0 +1,63 @@
+﻿@model IEnumerable<seg_1.Models.shopkeeper>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.shopkeeper_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopkeeper_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopkeeper_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopkeeper_mobile_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopeeper_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shop_start_date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopkeeper_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopkeeper_password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopkeeper_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopkeeper_mobile_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopeeper_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shop_start_date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.shopkeeper_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.shopkeeper_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.shopkeeper_id })
+        </td>
+    </tr>
+}
+
+</table>
