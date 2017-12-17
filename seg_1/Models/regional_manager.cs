@@ -23,7 +23,6 @@ namespace seg_1.Models
         public DateTime regional_manager_start_date { get; set; }
 
         public virtual distribution distributor { get; set; }
-        [Dispaly(Name ="Distributor")]
         public int distributor_id { get; set; }
 
 
