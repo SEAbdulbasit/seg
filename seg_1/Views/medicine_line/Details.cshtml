@@ -1,0 +1,34 @@
+﻿@model seg_1.Models.medicine_line
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>medicine_line</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine.medicine_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine.medicine_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sales.sales_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sales.sales_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.medicine_line_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

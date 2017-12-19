@@ -1,0 +1,82 @@
+﻿@model seg_1.Models.salesman
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>salesman</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.shopkeeper.shopkeeper_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shopkeeper.shopkeeper_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salesman_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salesman_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saleman_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saleman_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salesman_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salesman_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salesman_mobile_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salesman_mobile_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salesman_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salesman_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salesman_start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salesman_start_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.salesman_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

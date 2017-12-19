@@ -1,0 +1,45 @@
+﻿@model IEnumerable<seg_1.Models.threashold>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index Threashold</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine.medicine_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_threashold_quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine.medicine_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_threashold_quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.medicine_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.medicine_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.medicine_id })
+        </td>
+    </tr>
+}
+
+</table>

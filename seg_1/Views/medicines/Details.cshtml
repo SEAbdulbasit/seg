@@ -1,0 +1,58 @@
+﻿@model seg_1.Models.medicine
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>medicine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_purchasee_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_purchasee_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_siling_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_siling_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_dose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_dose)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.medicine_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

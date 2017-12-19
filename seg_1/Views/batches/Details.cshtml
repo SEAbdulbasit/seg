@@ -1,0 +1,42 @@
+﻿@model seg_1.Models.batch
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>batch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine.medicine_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine.medicine_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_expiry_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_expiry_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.batch_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

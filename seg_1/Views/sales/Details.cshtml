@@ -1,0 +1,42 @@
+﻿@model seg_1.Models.sales
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>sales</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salesman.salesman_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salesman.salesman_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sales_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sales_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sales_total_amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sales_total_amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sales_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

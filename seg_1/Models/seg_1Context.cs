@@ -28,5 +28,17 @@ namespace seg_1.Models
         public System.Data.Entity.DbSet<seg_1.Models.distribution> distributions { get; set; }
 
         public System.Data.Entity.DbSet<seg_1.Models.regional_manager> regional_manager { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.salesman> salesmen { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.sales> sales { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.medicine> medicines { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.batch> batches { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.medicine_line> medicine_line { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.threashold> threasholds { get; set; }
     }
 }

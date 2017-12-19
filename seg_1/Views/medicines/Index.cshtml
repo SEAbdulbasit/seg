@@ -1,0 +1,75 @@
+﻿@model IEnumerable<seg_1.Models.medicine>
+
+
+@{
+    ViewBag.Title = "Index Medicines";
+}
+
+<h2>Index Medicine</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_purchasee_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_siling_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medicine_dose)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_purchasee_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_siling_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine_dose)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.medicine_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.medicine_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.medicine_id }) |
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+        </td>
+    </tr>
+}
+
+</table>

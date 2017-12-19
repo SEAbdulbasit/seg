@@ -1,0 +1,42 @@
+﻿@model seg_1.Models.threashold
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>threashold</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine.medicine_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine.medicine_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medicine_threashold_quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medicine_threashold_quantity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.medicine_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

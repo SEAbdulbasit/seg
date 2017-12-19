@@ -39,6 +39,7 @@ namespace seg_1.Models
         public DateTime shop_start_date { get; set; }
 
         public virtual ICollection<shop> shop { get; set; }
+        public virtual ICollection<salesman> salesman { get; set; }
       
     }
    

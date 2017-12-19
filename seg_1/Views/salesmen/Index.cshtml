@@ -1,0 +1,75 @@
+﻿@model IEnumerable<seg_1.Models.salesman>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index Salesman</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.shopkeeper.shopkeeper_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salesman_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saleman_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salesman_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salesman_mobile_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salesman_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salesman_start_date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopkeeper.shopkeeper_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salesman_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saleman_password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salesman_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salesman_mobile_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salesman_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salesman_start_date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.salesman_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.salesman_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.salesman_id })
+        </td>
+    </tr>
+}
+
+</table>
