@@ -35,6 +35,8 @@ namespace seg_1.Models
 
         public virtual ICollection<distribution> distribution { get; set; }
         public virtual ICollection<regional_manager> regional_manger { get; set; }
+        public virtual ICollection<order> order { get; set; }
+        public virtual ICollection<communication> communication { get; set; }
 
 
     }

@@ -30,7 +30,8 @@ namespace seg_1.Models
 
         public virtual ICollection<medicine_line> medicineline { get; set; }
         public virtual ICollection<batch> batch { get; set; }
+        public virtual threashold threashold { get; set; }        
+        public virtual order_quantity order_quantity { get; set; }
 
-        public virtual threashold threashold { get; set; }       
     }
 }

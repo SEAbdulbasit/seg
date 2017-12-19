@@ -10,107 +10,116 @@ using seg_1.Models;
 
 namespace seg_1.Controllers
 {
-    public class distributorsController : Controller
+    public class ordersController : Controller
     {
         private seg_1Context db = new seg_1Context();
 
-        // GET: distributors
+        // GET: orders
         public ActionResult Index()
         {
-            return View(db.distributors.ToList());
+            var orders = db.orders.Include(o => o.distributor).Include(o => o.shopkeeper);
+            return View(orders.ToList());
         }
 
-        // GET: distributors/Details/5
+        // GET: orders/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            distributor distributor = db.distributors.Find(id);
-            if (distributor == null)
+            order order = db.orders.Find(id);
+            if (order == null)
             {
                 return HttpNotFound();
             }
-            return View(distributor);
+            return View(order);
         }
 
-        // GET: distributors/Create
+        // GET: orders/Create
         public ActionResult Create()
         {
+            ViewBag.distributor_id = new SelectList(db.distributors, "distributor_id", "distributor_name");
+            ViewBag.shopkeeper_id = new SelectList(db.shopkeepers, "shopkeeper_id", "shopkeeper_name");
             return View();
         }
 
-        // POST: distributors/Create
+        // POST: orders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "distributor_id,distributor_name,distributor_password,ConfirmPassword,distributor_address,distribbutor_mobile_no,distributor_email,distributior_start_date")] distributor distributor)
+        public ActionResult Create([Bind(Include = "order_id,distributor_id,shopkeeper_id,order_status,order_date")] order order)
         {
             if (ModelState.IsValid)
             {
-                db.distributors.Add(distributor);
+                db.orders.Add(order);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(distributor);
+            ViewBag.distributor_id = new SelectList(db.distributors, "distributor_id", "distributor_name", order.distributor_id);
+            ViewBag.shopkeeper_id = new SelectList(db.shopkeepers, "shopkeeper_id", "shopkeeper_name", order.shopkeeper_id);
+            return View(order);
         }
 
-        // GET: distributors/Edit/5
+        // GET: orders/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            distributor distributor = db.distributors.Find(id);
-            if (distributor == null)
+            order order = db.orders.Find(id);
+            if (order == null)
             {
                 return HttpNotFound();
             }
-            return View(distributor);
+            ViewBag.distributor_id = new SelectList(db.distributors, "distributor_id", "distributor_name", order.distributor_id);
+            ViewBag.shopkeeper_id = new SelectList(db.shopkeepers, "shopkeeper_id", "shopkeeper_name", order.shopkeeper_id);
+            return View(order);
         }
 
-        // POST: distributors/Edit/5
+        // POST: orders/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "distributor_id,distributor_name,distributor_password,ConfirmPassword,distributor_address,distribbutor_mobile_no,distributor_email,distributior_start_date")] distributor distributor)
+        public ActionResult Edit([Bind(Include = "order_id,distributor_id,shopkeeper_id,order_status,order_date")] order order)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(distributor).State = EntityState.Modified;
+                db.Entry(order).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(distributor);
+            ViewBag.distributor_id = new SelectList(db.distributors, "distributor_id", "distributor_name", order.distributor_id);
+            ViewBag.shopkeeper_id = new SelectList(db.shopkeepers, "shopkeeper_id", "shopkeeper_name", order.shopkeeper_id);
+            return View(order);
         }
 
-        // GET: distributors/Delete/5
+        // GET: orders/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            distributor distributor = db.distributors.Find(id);
-            if (distributor == null)
+            order order = db.orders.Find(id);
+            if (order == null)
             {
                 return HttpNotFound();
             }
-            return View(distributor);
+            return View(order);
         }
 
-        // POST: distributors/Delete/5
+        // POST: orders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            distributor distributor = db.distributors.Find(id);
-            db.distributors.Remove(distributor);
+            order order = db.orders.Find(id);
+            db.orders.Remove(order);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

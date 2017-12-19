@@ -169,12 +169,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\batchesController.cs" />
+    <Compile Include="Controllers\communicationsController.cs" />
     <Compile Include="Controllers\distributionsController.cs" />
     <Compile Include="Controllers\distributorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\medicinesController.cs" />
     <Compile Include="Controllers\medicine_lineController.cs" />
+    <Compile Include="Controllers\ordersController.cs" />
+    <Compile Include="Controllers\order_quantityController.cs" />
     <Compile Include="Controllers\regional_managerController.cs" />
     <Compile Include="Controllers\salesController.cs" />
     <Compile Include="Controllers\salesmenController.cs" />
@@ -187,6 +190,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\batch.cs" />
+    <Compile Include="Models\communication.cs" />
     <Compile Include="Models\DispalyAttribute.cs" />
     <Compile Include="Models\distribution.cs" />
     <Compile Include="Models\distributor.cs" />
@@ -194,6 +198,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\medicine_line.cs" />
     <Compile Include="Models\medicine.cs" />
+    <Compile Include="Models\order.cs" />
+    <Compile Include="Models\order_quantity.cs" />
     <Compile Include="Models\regional_manager.cs" />
     <Compile Include="Models\sales.cs" />
     <Compile Include="Models\salesman.cs" />
@@ -270,11 +276,6 @@
     <Content Include="Views\shops\Details.cshtml" />
     <Content Include="Views\shops\Edit.cshtml" />
     <Content Include="Views\shops\Index.cshtml" />
-    <Content Include="Views\distributors\Create.cshtml" />
-    <Content Include="Views\distributors\Delete.cshtml" />
-    <Content Include="Views\distributors\Details.cshtml" />
-    <Content Include="Views\distributors\Edit.cshtml" />
-    <Content Include="Views\distributors\Index.cshtml" />
     <Content Include="Views\regional_manager\Create.cshtml" />
     <Content Include="Views\regional_manager\Delete.cshtml" />
     <Content Include="Views\regional_manager\Details.cshtml" />
@@ -315,6 +316,21 @@
     <Content Include="Views\shopkeepers\Details.cshtml" />
     <Content Include="Views\shopkeepers\Edit.cshtml" />
     <Content Include="Views\shopkeepers\Index.cshtml" />
+    <Content Include="Views\communications\Create.cshtml" />
+    <Content Include="Views\communications\Delete.cshtml" />
+    <Content Include="Views\communications\Details.cshtml" />
+    <Content Include="Views\communications\Edit.cshtml" />
+    <Content Include="Views\communications\Index.cshtml" />
+    <Content Include="Views\orders\Create.cshtml" />
+    <Content Include="Views\orders\Delete.cshtml" />
+    <Content Include="Views\orders\Details.cshtml" />
+    <Content Include="Views\orders\Edit.cshtml" />
+    <Content Include="Views\orders\Index.cshtml" />
+    <Content Include="Views\distributors\Create.cshtml" />
+    <Content Include="Views\distributors\Delete.cshtml" />
+    <Content Include="Views\distributors\Details.cshtml" />
+    <Content Include="Views\distributors\Edit.cshtml" />
+    <Content Include="Views\distributors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

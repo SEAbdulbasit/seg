@@ -1,0 +1,58 @@
+﻿@model seg_1.Models.communication
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>communication</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.distributor.distributor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distributor.distributor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shopkeeper.shopkeeper_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shopkeeper.shopkeeper_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msg_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msg_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.send_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.send_time)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.communication_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

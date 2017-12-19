@@ -40,7 +40,9 @@ namespace seg_1.Models
 
         public virtual ICollection<shop> shop { get; set; }
         public virtual ICollection<salesman> salesman { get; set; }
-      
+        public virtual ICollection<order> order { get; set; }
+        public virtual ICollection<communication> communication { get; set; }
+
     }
-   
+
 }

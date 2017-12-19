@@ -1,0 +1,62 @@
+﻿@model IEnumerable<seg_1.Models.communication>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index communication</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Distributor ")
+            @Html.DisplayNameFor(model => model.distributor.distributor_name)
+        </th>
+        <th>
+            @Html.Label("Shopkeeper ")
+            @Html.DisplayNameFor(model => model.shopkeeper.shopkeeper_name)
+        </th>
+        <th>
+            @Html.Label("Message")
+
+
+            @Html.DisplayNameFor(model => model.message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.msg_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.send_time)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.distributor.distributor_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shopkeeper.shopkeeper_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.msg_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.send_time)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.communication_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.communication_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.communication_id })
+        </td>
+    </tr>
+}
+
+</table>

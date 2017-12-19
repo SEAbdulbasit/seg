@@ -40,5 +40,11 @@ namespace seg_1.Models
         public System.Data.Entity.DbSet<seg_1.Models.medicine_line> medicine_line { get; set; }
 
         public System.Data.Entity.DbSet<seg_1.Models.threashold> threasholds { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.communication> communications { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.order> orders { get; set; }
+
+        public System.Data.Entity.DbSet<seg_1.Models.order_quantity> order_quantity { get; set; }
     }
 }

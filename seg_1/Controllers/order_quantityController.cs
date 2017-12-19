@@ -10,107 +10,107 @@ using seg_1.Models;
 
 namespace seg_1.Controllers
 {
-    public class distributorsController : Controller
+    public class order_quantityController : Controller
     {
         private seg_1Context db = new seg_1Context();
 
-        // GET: distributors
+        // GET: order_quantity
         public ActionResult Index()
         {
-            return View(db.distributors.ToList());
+            return View(db.order_quantity.ToList());
         }
 
-        // GET: distributors/Details/5
+        // GET: order_quantity/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            distributor distributor = db.distributors.Find(id);
-            if (distributor == null)
+            order_quantity order_quantity = db.order_quantity.Find(id);
+            if (order_quantity == null)
             {
                 return HttpNotFound();
             }
-            return View(distributor);
+            return View(order_quantity);
         }
 
-        // GET: distributors/Create
+        // GET: order_quantity/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: distributors/Create
+        // POST: order_quantity/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "distributor_id,distributor_name,distributor_password,ConfirmPassword,distributor_address,distribbutor_mobile_no,distributor_email,distributior_start_date")] distributor distributor)
+        public ActionResult Create([Bind(Include = "medicine_id,order_quantityy")] order_quantity order_quantity)
         {
             if (ModelState.IsValid)
             {
-                db.distributors.Add(distributor);
+                db.order_quantity.Add(order_quantity);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(distributor);
+            return View(order_quantity);
         }
 
-        // GET: distributors/Edit/5
+        // GET: order_quantity/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            distributor distributor = db.distributors.Find(id);
-            if (distributor == null)
+            order_quantity order_quantity = db.order_quantity.Find(id);
+            if (order_quantity == null)
             {
                 return HttpNotFound();
             }
-            return View(distributor);
+            return View(order_quantity);
         }
 
-        // POST: distributors/Edit/5
+        // POST: order_quantity/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "distributor_id,distributor_name,distributor_password,ConfirmPassword,distributor_address,distribbutor_mobile_no,distributor_email,distributior_start_date")] distributor distributor)
+        public ActionResult Edit([Bind(Include = "medicine_id,order_quantityy")] order_quantity order_quantity)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(distributor).State = EntityState.Modified;
+                db.Entry(order_quantity).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(distributor);
+            return View(order_quantity);
         }
 
-        // GET: distributors/Delete/5
+        // GET: order_quantity/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            distributor distributor = db.distributors.Find(id);
-            if (distributor == null)
+            order_quantity order_quantity = db.order_quantity.Find(id);
+            if (order_quantity == null)
             {
                 return HttpNotFound();
             }
-            return View(distributor);
+            return View(order_quantity);
         }
 
-        // POST: distributors/Delete/5
+        // POST: order_quantity/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            distributor distributor = db.distributors.Find(id);
-            db.distributors.Remove(distributor);
+            order_quantity order_quantity = db.order_quantity.Find(id);
+            db.order_quantity.Remove(order_quantity);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
