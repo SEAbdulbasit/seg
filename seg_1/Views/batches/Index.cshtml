@@ -15,10 +15,13 @@
             @Html.DisplayNameFor(model => model.medicine.medicine_name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.medicine_name)
+            @Html.DisplayNameFor(model => model.medicine_arrival_date)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.medicine_expiry_date)
+        </th>
+        <th>
+            @Html.Label("Days to Expire")
         </th>
         <th></th>
     </tr>
@@ -29,10 +32,14 @@
             @Html.DisplayFor(modelItem => item.medicine.medicine_name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.medicine_name)
+            @Html.DisplayFor(modelItem => item.medicine_arrival_date)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.medicine_expiry_date)
+        </td>
+        <td>
+            
+            @Html.DisplayName((item.medicine_expiry_date.Year-DateTime.Now.Year).ToString())
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.batch_id }) |

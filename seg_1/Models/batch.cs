@@ -14,14 +14,16 @@ namespace seg_1.Models
         [DisplayName("ID")]
         public int batch_id { get; set; }
 
+        [DataType(DataType.Date)]
         [DisplayName("Arrival Date & Time")]
-        public DateTime medicine_name { get; set; }
+        public DateTime medicine_arrival_date { get; set; }
+
+        [DataType(DataType.Date)]
 
         [DisplayName("Expiry Date")]
         public DateTime medicine_expiry_date { get; set; }
 
         public virtual medicine medicine { get; set; }
-        [ForeignKey("medicine")]
         public int medicine_id { get; set; }
 
 }

@@ -20,7 +20,7 @@
         <th>
             @Html.DisplayNameFor(model => model.medicine_threashold_quantity)
         </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -34,6 +34,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.medicine_threashold_quantity)
         </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.medicine_id }) |
             @Html.ActionLink("Details", "Details", new { id=item.medicine_id }) |

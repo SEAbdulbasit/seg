@@ -21,11 +21,11 @@ namespace seg_1.Models
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string saleman_password { get; set; }
+        public string salesman_password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("shopkeeper_password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("salesman_password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         [DisplayName("Address")]

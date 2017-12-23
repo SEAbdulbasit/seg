@@ -48,7 +48,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "batch_id,medicine_name,medicine_expiry_date,medicine_id")] batch batch)
+        public ActionResult Create([Bind(Include = "batch_id,medicine_arrival_date,medicine_expiry_date,medicine_id")] batch batch)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "batch_id,medicine_name,medicine_expiry_date,medicine_id")] batch batch)
+        public ActionResult Edit([Bind(Include = "batch_id,medicine_arrival_date,medicine_expiry_date,medicine_id")] batch batch)
         {
             if (ModelState.IsValid)
             {

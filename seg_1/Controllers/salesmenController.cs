@@ -48,7 +48,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "salesman_id,salesman_name,saleman_password,ConfirmPassword,salesman_address,salesman_mobile_num,salesman_email,salesman_start_date,shopkeeper_id")] salesman salesman)
+        public ActionResult Create([Bind(Include = "salesman_id,salesman_name,salesman_password,ConfirmPassword,salesman_address,salesman_mobile_num,salesman_email,salesman_start_date,shopkeeper_id")] salesman salesman)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace seg_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "salesman_id,salesman_name,saleman_password,ConfirmPassword,salesman_address,salesman_mobile_num,salesman_email,salesman_start_date,shopkeeper_id")] salesman salesman)
+        public ActionResult Edit([Bind(Include = "salesman_id,salesman_name,salesman_password,ConfirmPassword,salesman_address,salesman_mobile_num,salesman_email,salesman_start_date,shopkeeper_id")] salesman salesman)
         {
             if (ModelState.IsValid)
             {

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using seg_1.Models;
+using seg_1.Controllers;
 
 namespace seg_1.Controllers
 {
@@ -17,10 +18,10 @@ namespace seg_1.Controllers
         // GET: medicines
         public ActionResult Index()
         {
-            return View(db.medicines.ToList());
+            var medicines = db.medicines.Include(m => m.threashold);
+            return View(medicines.ToList());
         }
-
-        // GET: medicines/Details/5
+         // GET: medicines/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,6 +39,7 @@ namespace seg_1.Controllers
         // GET: medicines/Create
         public ActionResult Create()
         {
+            ViewBag.medicine_id = new SelectList(db.threasholds, "medicine_id", "medicine_id");
             return View();
         }
 
@@ -55,6 +57,7 @@ namespace seg_1.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.medicine_id = new SelectList(db.threasholds, "medicine_id", "medicine_id", medicine.medicine_id);
             return View(medicine);
         }
 
@@ -70,6 +73,7 @@ namespace seg_1.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.medicine_id = new SelectList(db.threasholds, "medicine_id", "medicine_id", medicine.medicine_id);
             return View(medicine);
         }
 
@@ -86,8 +90,26 @@ namespace seg_1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.medicine_id = new SelectList(db.threasholds, "medicine_id", "medicine_id", medicine.medicine_id);
             return View(medicine);
         }
+
+
+
+        public  ActionResult Details_quantity(int ? id)
+        {
+
+            return RedirectToAction("Details/" + id.ToString(), "threasholds");
+
+        }
+
+
+
+
+
+
+
+
 
         // GET: medicines/Delete/5
         public ActionResult Delete(int? id)

@@ -35,6 +35,8 @@ namespace seg_1.Models
         public string shopkeeper_mobile_no { get; set; }
         [Display(Name = "Email")]
         public string shopeeper_email { get; set; }
+
+        [DataType(DataType.Date)]
         [Display(Name = "Shop Start Date")]
         public DateTime shop_start_date { get; set; }
 
